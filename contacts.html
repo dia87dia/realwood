@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Контакты — РеалВуд</title>
+  <meta name="description" content="Контакты ООО «РеалВуд». Оставьте заявку на поставку древесного угля: фасовка 2.5/3/6/10 кг и биг-беги." />
+  <link rel="icon" href="./assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="./index.html" aria-label="РеалВуд — на главную">
+        <span class="brand-mark" aria-hidden="true">RW</span>
+        <span class="brand-text">
+          <span class="brand-title">РеалВуд</span>
+          <span class="brand-subtitle">древесный уголь</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Основная навигация" data-nav>
+        <a class="nav-link" href="./index.html">Описание и характеристики</a>
+        <a class="nav-link" href="./advantages.html">Преимущества</a>
+        <a class="nav-link" href="./about.html">О компании</a>
+        <a class="nav-link is-active" href="./contacts.html">Контакты</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn-secondary" href="tel:+375296635744">Позвонить</a>
+        <a class="btn btn-ghost" href="#form">Заявка</a>
+        <button class="icon-btn" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileMenu" data-menu-button>
+          <span class="icon-btn-bars" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" data-mobile-menu hidden>
+      <div class="container mobile-menu-inner">
+        <a class="mobile-link" href="./index.html">Описание и характеристики</a>
+        <a class="mobile-link" href="./advantages.html">Преимущества</a>
+        <a class="mobile-link" href="./about.html">О компании</a>
+        <a class="mobile-link" href="./contacts.html">Контакты</a>
+        <a class="btn btn-secondary" href="tel:+375296635744">Позвонить</a>
+        <a class="btn btn-primary" href="#form">Оставить заявку</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-inner">
+          <div>
+            <div class="badge">Связь • Заявка • Доставка</div>
+            <h1 class="page-title">Контакты</h1>
+            <p class="page-text">Позвоните или напишите в Telegram — быстро уточним фасовку, объёмы и доставку.<br>Почта — если нужно отправить реквизиты/файлы.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid contact-grid">
+          <!-- Левая колонка: Контактная информация -->
+          <div class="contact-card">
+            <h2 class="section-title">Связаться</h2>
+            <div class="contact-list">
+              <div class="contact-item">
+                <div class="contact-label">Telegram</div>
+                <a class="contact-value" href="https://t.me/realwood_by" target="_blank" rel="noopener">@realwood_by</a>
+              </div>
+              <div class="contact-item">
+                <div class="contact-label">Телефон</div>
+                <a class="contact-value" href="tel:+375296635744">+375 (29) 663-57-44</a><br />
+                <a class="contact-value" href="tel:+375292000355">+375 (29) 200-03-55</a>
+              </div>
+              <div class="contact-item">
+                <div class="contact-label">Email</div>
+                <a class="contact-value" href="mailto:vasiliraiko@mail.ru">vasiliraiko@mail.ru</a>
+              </div>
+              <div class="contact-item">
+                <div class="contact-label">Адрес</div>
+                <div class="contact-value">Брестская обл., Барановичский р-н, Почаповский с/с, 1, 2,2 км. северо-восточнее д. Застаринье</div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-label">Режим работы</div>
+                <div class="contact-value">Пн–Пт 09:00–18:00</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Правая колонка: Форма заявки -->
+          <div class="form-card" id="form">
+            <h2 class="section-title">Заявка</h2>
+            <form class="form" 
+                  data-contact-form 
+                  action="https://j29257jc.beget.tech/submit.php" 
+                  method="POST" 
+                  novalidate>
+              
+              <!-- Поле: Телефон (обязательное) -->
+              <div class="field">
+                <label class="label" for="phone">Телефон *</label>
+                <input class="input" 
+                       id="phone" 
+                       name="phone" 
+                       type="tel"
+                       inputmode="tel" 
+                       autocomplete="tel" 
+                       placeholder="+375 (..) ..." 
+                       required />
+              </div>
+
+              <!-- Поле: Формат (радиокнопки) -->
+              <div class="field">
+                <div class="label">Формат</div>
+                <div class="choice-grid" role="radiogroup" aria-label="Формат заказа">
+                  <label class="choice">
+                    <input class="choice-input" type="radio" name="type" value="Опт" checked />
+                    <span class="choice-card">
+                      <span class="choice-title">Опт</span>
+                      <span class="choice-text">Биг-беги / мешки</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Поле: Объём (необязательное) -->
+              <div class="field">
+                <label class="label" for="volume">Объём</label>
+                <input class="input" 
+                       id="volume" 
+                       name="volume" 
+                       placeholder="Например: 100 мешков / 500 кг" />
+              </div>
+
+              <!-- Раскрывающийся комментарий -->
+              <details class="form-more">
+                <summary class="form-more-summary">Добавить комментарий</summary>
+                <div class="field mt-16">
+                  <label class="label" for="message">Комментарий (необязательно)</label>
+                  <textarea class="textarea" 
+                            id="message" 
+                            name="message" 
+                            rows="4" 
+                            placeholder="Город, адрес доставки, сроки, пожелания..."></textarea>
+                </div>
+              </details>
+
+              <button class="btn btn-primary" type="submit" data-submit-btn>Отправить</button>
+              <p class="form-hint">Менеджер свяжется с вами в течение рабочего времени и уточнит детали.</p>
+              <div class="form-result" data-form-result role="status" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="map-card">
+          <div class="map-head">
+            <h2 class="section-title">Карта</h2>
+            <p class="section-text">Брестская обл., Барановичский р-н, Почаповский с/с</p>
+          </div>
+          <div class="map-placeholder" role="img" aria-label="Карта проезда"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-top">
+          <div class="footer-brand-col">
+            <div class="footer-brand">
+              <div class="footer-brand-mark" aria-hidden="true"></div>
+              <span>ООО «РеалВуд»</span>
+            </div>
+            <p class="footer-description">Производитель древесного угля премиум-качества. Оптовые поставки для магазинов, HoReCa и организаций. Фасовка 2.5/3/6/10 кг и биг-беги. Доставка по Беларуси.</p>
+          </div>
+
+          <nav class="footer-links" aria-label="Навигация по сайту">
+            <a href="./index.html#description">Описание</a>
+            <a href="./index.html#advantages">Преимущества</a>
+            <a href="./index.html#production">Производство</a>
+            <a href="./index.html#gallery">Галерея</a>
+            <a href="./about.html">О компании</a>
+            <a href="./contacts.html">Контакты</a>
+          </nav>
+
+          <div class="footer-contacts">
+            <div class="footer-contact-item">
+              <div class="footer-contact-label">Телефон</div>
+              <a class="footer-contact-value" href="tel:+375296635744">+375 (29) 663-57-44</a>
+            </div>
+            <div class="footer-contact-item">
+              <div class="footer-contact-label">Email</div>
+              <a class="footer-contact-value" href="mailto:vasiliraiko@mail.ru">vasiliraiko@mail.ru</a>
+            </div>
+            <div class="footer-contact-item">
+              <div class="footer-contact-label">Telegram</div>
+              <a class="footer-contact-value" href="https://t.me/realwood_by" target="_blank" rel="noopener">@realwood_by</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-copy">© 2026 ООО «РеалВуд». Все права защищены.</div>
+          <div class="footer-legal">
+            <a href="#">Политика конфиденциальности</a>
+            <a href="#">Условия использования</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
