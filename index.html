@@ -15,6 +15,31 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./assets/css/styles.css" />
+  <style>
+    /* Исправление бага с "тремя полосками" (бургер-меню) */
+    [data-menu-button] {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 0 !important;
+      width: 44px !important;
+      height: 44px !important;
+    }
+    .icon-btn-bars {
+      position: relative !important;
+      margin: 0 auto !important;
+    }
+
+    /* Исправление перекрытия футера липкими кнопками на мобилках */
+    @media (max-width: 768px) {
+      body {
+        padding-bottom: 80px !important;
+      }
+      .site-footer {
+        padding-bottom: 100px !important;
+      }
+    }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Перейти к содержимому</a>
@@ -149,140 +174,32 @@
       </div>
     </section>
 
-    <section class="section section-alt section-narrow">
-      <div class="container">
-        <div class="section-head">
-          <h2 class="section-title">Основные параметры и условия поставки</h2>
-        </div>
-
-        <div class="panel">
-          <div class="cols">
-            <div>
-              <div class="defs">
-                <div class="def"><span>Качество</span><span>премиум</span></div>
-                <div class="def"><span>Фракция</span><span>крупная</span></div>
-                <div class="def"><span>Обработка</span><span>просеянный</span></div>
-                <div class="def"><span>Наличие</span><span>уточняйте</span></div>
-              </div>
-            </div>
-            <div>
-              <div class="defs">
-                <div class="def"><span>Породы</span><span>берёза / граб / смешанные</span></div>
-                <div class="def"><span>Фасовка</span><span>2.5 / 3 / 6 / 10 кг</span></div>
-                <div class="def"><span>Опт</span><span>биг-беги</span></div>
-                <div class="def"><span>Доставка</span><span>по согласованию</span></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="mt-16">
-            <a class="btn btn-primary" href="#advantages">Преимущества</a>
-            <a class="btn btn-ghost" href="#contacts">Оставить заявку</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="advantages">
+    <section class="section section-alt" id="advantages">
       <div class="container">
         <div class="section-head">
           <h2 class="section-title">Преимущества</h2>
+          <p class="section-text">Почему выбирают наш уголь для постоянных поставок.</p>
         </div>
-
-        <div class="panel">
-          <div class="prose">
-            <p>Мы ориентируемся на стабильность характеристик: крупная фракция, просеивание и удобная фасовка. Это делает уголь более предсказуемым для приготовления и более аккуратным при хранении.</p>
-          </div>
-          <ul class="list">
-            <li>Крупная фракция — стабильный жар</li>
-            <li>Просеянный — меньше пыли</li>
-            <li>Фасовка 2.5/3/6/10 кг и биг-беги</li>
-            <li>Доставка по согласованию</li>
-          </ul>
-        </div>
-
-        <div class="grid cards mt-16">
-          <article class="card">
-            <div class="card-icon" aria-hidden="true">◆</div>
-            <h3 class="card-title">Стабильный жар</h3>
-            <p class="card-text">Вы быстрее выходите на рабочую температуру и получаете предсказуемый результат на мангале и гриле.</p>
+        <div class="grid features-grid">
+          <article class="feature">
+            <div class="feature-icon" aria-hidden="true">🔥</div>
+            <h3 class="feature-title">Стабильное горение</h3>
+            <p class="feature-text">Высокое содержание нелетучего углерода обеспечивает длительный и ровный жар без лишнего дыма.</p>
           </article>
-          <article class="card">
-            <div class="card-icon" aria-hidden="true">✓</div>
-            <h3 class="card-title">Без пыли и мелочи</h3>
-            <p class="card-text">Просеивание — меньше мусора, чище руки, аккуратнее мангал и зона приготовления.</p>
+          <article class="feature">
+            <div class="feature-icon" aria-hidden="true">💎</div>
+            <h3 class="feature-title">Крупная фракция</h3>
+            <p class="feature-text">Просеиваем уголь, чтобы минимизировать пыль и мелкую крошку. Только отборные куски.</p>
           </article>
-          <article class="card">
-            <div class="card-icon" aria-hidden="true">▦</div>
-            <h3 class="card-title">Фасовка под вашу задачу</h3>
-            <p class="card-text">Фасовка 2.5/3/6/10 кг и биг-беги. Согласуем удобный формат под вашу задачу.</p>
+          <article class="feature">
+            <div class="feature-icon" aria-hidden="true">🏭</div>
+            <h3 class="feature-title">Прямые цены</h3>
+            <p class="feature-text">Вы работаете напрямую с производителем, без лишних посредников и наценок.</p>
           </article>
-          <article class="card">
-            <div class="card-icon" aria-hidden="true">⟟</div>
-            <h3 class="card-title">Чёткая логистика</h3>
-            <p class="card-text">Согласуем дату и время отгрузки под ваш график. Быстро считаем доставку и условия.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-alt" id="gallery">
-      <div class="container">
-        <div class="section-head">
-          <h2 class="section-title">Галерея</h2>
-          <p class="section-text">Фото продукта, упаковки и производства.</p>
-        </div>
-
-        <div class="grid gallery">
-          <div class="gallery-item" role="button" tabindex="0" aria-label="Уголь крупным планом" data-gallery-src="./assets/img/ygol1.jpg"></div>
-          <div class="gallery-item" role="button" tabindex="0" aria-label="Уголь (вариант)" data-gallery-src="./assets/img/ygol2.png"></div>
-          <div class="gallery-item" role="button" tabindex="0" aria-label="Производство" data-gallery-src="./assets/img/proizvodstvo1.jpg"></div>
-          <div class="gallery-item" role="button" tabindex="0" aria-label="Упаковка" data-gallery-src="./assets/img/ypakovka1.png"></div>
-          <div class="gallery-item" role="button" tabindex="0" aria-label="Упаковка (вариант 2)" data-gallery-src="./assets/img/ypakovka2.jpg"></div>
-          <div class="gallery-item" role="button" tabindex="0" aria-label="Упаковка (вариант 3)" data-gallery-src="./assets/img/ypakovka3.jpg"></div>
-        </div>
-
-        <div class="mt-16">
-          <a class="btn btn-primary" href="#contacts">Уточнить условия</a>
-          <a class="btn btn-ghost" href="https://t.me/realwood_by" target="_blank" rel="noopener">Спросить в Telegram</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="about">
-      <div class="container">
-        <div class="section-head">
-          <h2 class="section-title">О компании</h2>
-          <p class="section-text">Вы получаете продукт, который удобно продавать и использовать: понятные условия, стабильные поставки и поддержка.</p>
-        </div>
-
-        <div class="panel">
-          <div class="prose">
-            <p>«РеалВуд» — производственное предприятие с полным циклом: заготовка древесины, карбонизация, охлаждение, сортировка и фасовка. Мы не посредники — вы работаете напрямую с производителем. Это означает честную цену, контроль качества на каждом этапе и гибкость в условиях поставки.</p>
-            <p>Наша цель — сделать оптовые закупки угля простыми и предсказуемыми. Вы получаете продукт стабильного качества, понятные условия сотрудничества и надёжную логистику.</p>
-          </div>
-        </div>
-
-        <div class="grid cards mt-16">
-          <article class="card">
-            <div class="card-icon" aria-hidden="true">✓</div>
-            <h3 class="card-title">Качество</h3>
-            <p class="card-text">Стабильные характеристики и предсказуемый результат при приготовлении.</p>
-          </article>
-          <article class="card">
-            <div class="card-icon" aria-hidden="true">⟟</div>
-            <h3 class="card-title">Надежность</h3>
-            <p class="card-text">Согласование объемов, сроков и доставки — без сюрпризов.</p>
-          </article>
-          <article class="card">
-            <div class="card-icon" aria-hidden="true">▦</div>
-            <h3 class="card-title">Гибкость</h3>
-            <p class="card-text">Форматы фасовки и поставок можно адаптировать под вашу задачу.</p>
-          </article>
-          <article class="card">
-            <div class="card-icon" aria-hidden="true">◆</div>
-            <h3 class="card-title">Премиум подход</h3>
-            <p class="card-text">Акцент на крупной фракции и просеивании, чтобы продукт был удобным.</p>
+          <article class="feature">
+            <div class="feature-icon" aria-hidden="true">📦</div>
+            <h3 class="feature-title">Любая фасовка</h3>
+            <p class="feature-text">Пакеты по 2.5, 3, 5, 10 кг или биг-беги — подготовим формат под ваш запрос.</p>
           </article>
         </div>
       </div>
@@ -291,63 +208,57 @@
     <section class="section" id="production">
       <div class="container">
         <div class="section-head">
-          <h2 class="section-title">Процесс производства</h2>
-          <p class="section-text">Полный цикл производства древесного угля: от заготовки сырья до фасовки готового продукта. Контролируем каждый этап, чтобы вы получали стабильное качество в каждой партии.</p>
+          <h2 class="section-title">Производство</h2>
+          <p class="section-text">От заготовки сырья до финальной отгрузки клиенту.</p>
         </div>
-
-        <div class="production-grid">
+        <div class="grid production-grid">
           <article class="production-card">
-            <div class="production-step">
+            <div class="production-header">
               <div class="production-num">01</div>
-              <div class="production-label">Заготовка</div>
+              <div class="production-label">Сырьё</div>
             </div>
             <div class="production-icon" aria-hidden="true">🌳</div>
-            <h3 class="production-title">Подготовка сырья</h3>
-            <p class="production-text">Используем берёзу, граб и смешанные лиственные породы. Древесина проходит отбор по качеству и влажности перед загрузкой в печи.</p>
+            <h3 class="production-title">Заготовка древесины</h3>
+            <p class="production-text">Используем твёрдолиственные породы (берёза, граб). Это гарантирует высокую плотность и теплоотдачу угля.</p>
           </article>
-
           <article class="production-card">
-            <div class="production-step">
+            <div class="production-header">
               <div class="production-num">02</div>
-              <div class="production-label">Карбонизация</div>
+              <div class="production-label">Пиролиз</div>
             </div>
-            <div class="production-icon" aria-hidden="true">🔥</div>
-            <h3 class="production-title">Обжиг в печах</h3>
-            <p class="production-text">Медленная пиролизная карбонизация при контролируемой температуре. Процесс занимает несколько часов — это даёт плотный, качественный уголь без примесей.</p>
+            <div class="production-icon" aria-hidden="true">🌡️</div>
+            <h3 class="production-title">Термическая обработка</h3>
+            <p class="production-text">Выжигание происходит в специальных печах при строго контролируемой температуре без доступа кислорода.</p>
           </article>
-
           <article class="production-card">
-            <div class="production-step">
+            <div class="production-header">
               <div class="production-num">03</div>
               <div class="production-label">Охлаждение</div>
             </div>
             <div class="production-icon" aria-hidden="true">❄️</div>
-            <h3 class="production-title">Контролируемое охлаждение</h3>
-            <p class="production-text">После обжига уголь охлаждается в закрытых камерах. Это предотвращает самовозгорание и сохраняет структуру крупной фракции.</p>
+            <h3 class="production-title">Стабилизация</h3>
+            <p class="production-text">Уголь проходит процесс естественного охлаждения и стабилизации перед дальнейшей обработкой.</p>
           </article>
-
           <article class="production-card">
-            <div class="production-step">
+            <div class="production-header">
               <div class="production-num">04</div>
-              <div class="production-label">Просеивание</div>
+              <div class="production-label">Сортировка</div>
             </div>
-            <div class="production-icon" aria-hidden="true">⚙️</div>
-            <h3 class="production-title">Сортировка и просеивание</h3>
-            <p class="production-text">Уголь проходит через систему сит. Отделяем крупную фракцию от мелочи и пыли — вы получаете чистый продукт без мусора.</p>
+            <div class="production-icon" aria-hidden="true">🔍</div>
+            <h3 class="production-title">Просеивание и отбор</h3>
+            <p class="production-text">Удаляем мелкую фракцию и пыль. Оставляем только качественные куски нужного размера.</p>
           </article>
-
           <article class="production-card">
-            <div class="production-step">
+            <div class="production-header">
               <div class="production-num">05</div>
-              <div class="production-label">Фасовка</div>
+              <div class="production-label">Упаковка</div>
             </div>
             <div class="production-icon" aria-hidden="true">📦</div>
-            <h3 class="production-title">Упаковка</h3>
-            <p class="production-text">Фасуем в пакеты 2.5 / 3 / 6 / 10 кг или биг-беги. Возможна индивидуальная фасовка под ваши требования и бренд.</p>
+            <h3 class="production-title">Фасовка</h3>
+            <p class="production-text">Автоматизированная или ручная фасовка в пакеты от 2.5 до 10 кг или в биг-беги для крупных партий.</p>
           </article>
-
           <article class="production-card">
-            <div class="production-step">
+            <div class="production-header">
               <div class="production-num">06</div>
               <div class="production-label">Доставка</div>
             </div>
@@ -448,56 +359,44 @@
       <div class="faq">
         <details class="faq-item">
           <summary class="faq-q">
-            <span class="faq-q-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-            </span>
-            <span class="faq-q-text">Какая минимальная партия для опта?</span>
-            <span class="faq-q-arrow">
+            Какая минимальная партия для опта?
+            <span class="faq-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </span>
           </summary>
           <div class="faq-a-wrapper">
-            <div class="faq-a">Минимальный объём зависит от формата (фасовка/биг-беги) и доставки. Напишите объём и город — быстро посчитаем.</div>
+            <div class="faq-a">Работаем с объёмами от 100 кг (или от нескольких биг-бегов). Для постоянных партнёров условия обсуждаются индивидуально.</div>
           </div>
         </details>
 
         <details class="faq-item">
           <summary class="faq-q">
-            <span class="faq-q-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-            </span>
-            <span class="faq-q-text">Какие породы и фасовка доступны?</span>
-            <span class="faq-q-arrow">
+            Какие породы и фасовка доступны?
+            <span class="faq-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </span>
           </summary>
           <div class="faq-a-wrapper">
-            <div class="faq-a">Работаем только оптом. Породы: берёза, граб, смешанные лиственные. Фасовка: 2.5/3/6/10 кг, биг-беги (полипропилен) и под ваш вариант.</div>
+            <div class="faq-a">Основное сырьё: берёза и граб. Фасовка: пакеты 2.5, 3, 5, 10 кг. Также отгружаем в биг-бегах по ~500 кг.</div>
           </div>
         </details>
 
         <details class="faq-item">
           <summary class="faq-q">
-            <span class="faq-q-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-            </span>
-            <span class="faq-q-text">Как организована доставка?</span>
-            <span class="faq-q-arrow">
+            Как организована доставка?
+            <span class="faq-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </span>
           </summary>
           <div class="faq-a-wrapper">
-            <div class="faq-a">Доставка привлечённым транспортом по согласованию. Подбираем перевозчика, заранее озвучиваем стоимость — после подтверждения организуем отгрузку.</div>
+            <div class="faq-a">Доставляем по всей Беларуси привлечённым транспортом. Стоимость и сроки зависят от объёма и удалённости вашего склада.</div>
           </div>
         </details>
 
         <details class="faq-item">
           <summary class="faq-q">
-            <span class="faq-q-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-            </span>
-            <span class="faq-q-text">Как быстрее всего получить расчёт?</span>
-            <span class="faq-q-arrow">
+            Как быстрее всего получить расчёт?
+            <span class="faq-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </span>
           </summary>
@@ -573,8 +472,6 @@
       </div>
     </div>
   </footer>
-
-  <script src="./assets/js/main.js"></script>
 
   <div class="sticky-contacts" aria-label="Быстрые контакты">
     <a class="sticky-btn sticky-btn-primary" href="tel:+375296635744">Позвонить</a>

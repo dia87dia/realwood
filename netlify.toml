@@ -1,13 +1,13 @@
-# Настройки сборки
+# Настройки сборки Netlify
 [build]
   functions = "netlify/functions"
   publish = "."
 
-# Плагин для автоматической установки зависимостей функций
+# Плагин для автоматической установки зависимостей функций перед деплоем
 [[plugins]]
   package = "@netlify/plugin-functions-install-core"
 
-# Настройки перенаправлений (на всякий случай)
+# Перенаправления (опционально, для удобства обращения к API)
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
