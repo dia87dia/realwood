@@ -1,5 +1,5 @@
 // ============================================
-// Обработчик контактной формы
+// Обработчик контактной формы (отправка на Beget)
 // ============================================
 (function() {
     const form = document.querySelector('[data-contact-form]');
@@ -17,7 +17,7 @@
         });
     }
 
-    // Отправка формы
+    // Отправка формы на Beget
     form.addEventListener('submit', async function(e) {
         e.preventDefault();
 
@@ -40,7 +40,8 @@
         const formData = new FormData(form);
 
         try {
-            const response = await fetch(form.action, {
+            // Отправка на Beget
+            const response = await fetch('https://j29257jc.beget.tech/submit.php', {
                 method: 'POST',
                 body: formData
             });
