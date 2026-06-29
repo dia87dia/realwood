@@ -99,23 +99,10 @@
           <!-- Правая колонка: Форма заявки -->
           <div class="form-card" id="form">
             <h2 class="section-title">Заявка</h2>
-            <form class="form" 
-                  data-contact-form 
-                  action="https://j29257jc.beget.tech/submit.php" 
-                  method="POST" 
-                  novalidate>
-              
-              <!-- Поле: Телефон (обязательное) -->
+            <form class="form" data-contact-form action="/api/submit_lead" method="POST" novalidate>
               <div class="field">
                 <label class="label" for="phone">Телефон *</label>
-                <input class="input" 
-                       id="phone" 
-                       name="phone" 
-                       type="tel"
-                       inputmode="tel" 
-                       autocomplete="tel" 
-                       placeholder="+375 (..) ..." 
-                       required />
+                <input class="input" id="phone" name="phone" type="tel" required />
               </div>
 
               <!-- Поле: Формат (радиокнопки) -->
